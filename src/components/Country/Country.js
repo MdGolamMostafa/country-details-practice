@@ -1,8 +1,15 @@
 import React from 'react';
-import {Link } from 'react-router-dom';
+import {Link, useHistory } from 'react-router-dom';
 
 const Country = (props) => {
         const {name,flag} = props.country;
+        const history = useHistory();
+        const handleClick = (countryName)=> {
+            history.push(`/country/${countryName}`)
+        }
+
+
+
     const countryStyle={
         border:'1px solid red',
         margin:'22px',
@@ -24,6 +31,8 @@ const Country = (props) => {
             
 
             <Link to={`/country/${name}`}><button>Click for details</button></Link>
+
+            <button onClick={()=> handleClick(name)} >Details here</button>
         </div>
         </div>
     );

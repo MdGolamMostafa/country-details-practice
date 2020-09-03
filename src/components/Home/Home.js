@@ -16,12 +16,18 @@ const Home = () => {
       return country.name.toLowerCase().includes(search.toLowerCase())
   })
 
+  const style={
+    textAlign:'center'
+}
+
     return (
         
-        <div>
+        <div style= { style}>
             
-                <h1>Country :{country.length}</h1>
-                <input type="text" placeholder="Search" onChange={e=> setSearch(e.target.value)}/>
+               <div  >
+               <h1>Total Country found :{country.length}</h1>
+                <input type="text" placeholder="Search " onChange={e=> setSearch(e.target.value)}/>
+               </div>
                {
                     filteredCountries.map(country => <Country country={country} ></Country>)
                }

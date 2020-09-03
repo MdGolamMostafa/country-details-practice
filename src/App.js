@@ -5,10 +5,7 @@ import Home from './components/Home/Home';
 import {
   BrowserRouter as Router,
   Route,
-  Link,
   Switch,
-  Redirect,
-  useLocation
 } from "react-router-dom";
 
 import NoMatch from './components/NoMatch/NoMatch';
